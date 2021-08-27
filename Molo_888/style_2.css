@@ -1,0 +1,58 @@
+.container {
+    display: grid;
+    grid-template-areas: 
+    'area1 area2 area2 area2 area3'
+    'area1 area4 area5 area6 area3'
+    'area1 area4 area7 area7 area3'
+    ;
+    gap: 10px; /* отсупы между элементами*/
+    padding: 15px 15px;
+    border-radius: 5px;
+    background-color: royalblue;
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+    height: 500px;
+}
+
+[class*="item-"] {
+    font-weight: bold;
+    border-radius: 3px;
+    font-size: 130%;
+    padding: 4px;
+    margin: 10px;
+    background-color: indigo;
+    text-align: center;
+}
+
+.container div:nth-child(odd) {
+    background-color: mediumturquoise;
+}
+
+.item-1 {
+    grid-area: area1;
+}
+
+.item-2 {
+    grid-area: area2;
+}
+
+.item-3 {
+    grid-area: area3;
+}
+
+.item-4 {
+    grid-area: area4;
+}
+
+.item-5 {
+    grid-area: area5;
+}
+
+.item-6 {
+    grid-area: area6;
+}
+
+.item-7 {
+    grid-area: area7;
+}

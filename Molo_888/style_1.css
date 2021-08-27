@@ -1,0 +1,73 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /*сеточный шаблон по колонкам*/
+    gap: 10px; /* отсупы между элементами*/
+    padding: 15px 15px;
+    border-radius: 5px;
+    background-color: royalblue;
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+    height: 500px;
+}
+
+[class*="item-"] {
+    font-weight: bold;
+    border-radius: 3px;
+    font-size: 130%;
+    padding: 4px;
+    margin: 10px;
+    background-color: indigo;
+    text-align: center;
+}
+
+.container div:nth-child(odd) {
+    background-color: mediumturquoise;
+}
+
+.item-1 {
+    grid-column: 1 / 5;
+    grid-row: 1;
+}
+
+.item-2 {
+    grid-column: 1;
+    grid-row: 2;
+    /* grid-column-start: 2;
+    grid-column-end: 4; */
+}
+
+.item-3 {
+    grid-area: 2 / 2 / 4 / 5;
+    /* grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column: 4; */
+}
+
+.item-4 {
+    grid-column: 1;
+    grid-row: 3 / 5;
+    /* grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4; */
+}
+
+.item-5 {
+    grid-column: 2 / 4;
+    grid-row: 4;
+    /* grid-column: 4;
+    grid-row: 3; */
+}
+
+.item-6 {
+    grid-column: 4;
+    grid-row: 4;
+    /* grid-column-start: 1;
+    grid-column-end: 5; */
+}
+
+.item-7 {
+   grid-row: 5;
+   grid-column: 1 / span 4;
+}

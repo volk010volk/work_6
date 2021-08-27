@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+header {
+    height: 500px;
+    background: url(img/praga-bg.jpg) no-repeat center;
+     background-size: cover; /*расстянуть на всю ширину картинку */
+    color: white;
+    display: flex;
+    display: -ms-flex;
+    display: -webkit-flex;
+
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+@keyframes moveleft {
+    0% {opacity: 0; transform: translateX(-100%);}
+}
+
+@keyframes moveright {
+    0% {opacity: 0; transform: translateX(100%);}
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    animation: moveleft 0.5s ease-out 0.3s backwards;
+}
+
+header > h2 {
+    font-size: 2em;
+    animation: moveright 0.5s ease-out 0.8s backwards;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-weight: 500;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: auto 15px;
+}
+
+.row {
+    display: flex;
+    display: -ms-flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+[class*="col-"] {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    min-width: 1px;
+    max-width: 100%;
+}
+
+.col-1 {
+    flex: 0 0 50%;
+}
+
+.col-2 {
+    flex: 0 0 50%;
+}
+
+.kartinka {
+    max-width: 100%;
+}
+
+.ramka {
+    border-color: #dbdbdb;
+    transition: 50s ease-out;
+}
+
+a>img {
+    width: 100%;
+    height: 100%;
+}
+
+.col-3 {
+    margin: 10px 0;
+    padding: 15px auto;
+    position: relative;
+    overflow: hidden;
+    flex: 0 0 33%;
+    flex-wrap: wrap;
+    /* border: 4px solid transparent;  анимация
+    transition: 400ms ease-out; */
+}
+
+.col-3 img {
+    display: block;
+    border: 4px solid #dbdbdb;
+    transition: 400ms ease-out;
+}
+
+.col-3:hover img {
+    transform: scale(1.2);
+}
+
+footer {
+    height: 100px;
+}
+
+footer p {
+    border-top: 10px dotted red;
+    padding: 20px;
+    text-align: center;
+    font-size: 50px;
+}
